@@ -1,0 +1,20 @@
+.button
+  display: flex
+  justify-content: center
+  background: orange
+  width: 150px
+  height: 60px
+  border: none
+  position: relative
+  z-index: -1
+  color: white
+  &::after
+    width: 0
+    height: 0
+    position: absolute
+    border-left: 50px solid transparent
+    border-right: 50px solid transparent
+    border-top: 100px solid black
+    background: black
+  @media screen and (max-width: 769px)
+    display: none
