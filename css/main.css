@@ -51,15 +51,16 @@ table {
 
 body {
   width: 100%;
-  height: 50em;
+  height: 150em;
   color: white;
   text-transform: uppercase;
   background: black; }
 
 .wrap {
+  position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  max-width: 100%;
   height: auto;
   margin: 0 auto; }
   .wrap::after {
@@ -110,17 +111,10 @@ a {
   .top-nav .logo {
     display: flex;
     align-items: center;
-    max-width: 30%;
     height: auto; }
-    @media screen and (max-width: 675px) {
-      .top-nav .logo {
-        max-width: 90%; } }
-    .top-nav .logo a {
-      width: 100%;
-      height: auto; }
     .top-nav .logo .bear-paw {
       max-width: 50%;
-      height: auto;
+      height: 60px;
       align-items: center; }
   .top-nav .sandwich {
     width: 50px;
@@ -130,6 +124,7 @@ a {
         display: none; } }
   .top-nav ul {
     display: flex;
+    align-items: center;
     font-size: 14px;
     width: 65%;
     height: 100%;
@@ -141,8 +136,8 @@ a {
       margin-left: 25px; }
 
 .hero {
-  width: 100%;
-  height: 550px; }
+  max-width: 100%;
+  height: auto; }
   .hero img {
     max-width: 100%;
     height: auto;
@@ -190,5 +185,26 @@ a {
     height: auto; }
     .middle-nav ul li {
       margin-right: 5%; }
+      .middle-nav ul li:last-child {
+        position: relative;
+        left: 30%; }
+
+.grid {
+  display: flex;
+  max-width: 100%;
+  height: auto;
+  margin-right: 0;
+  flex-direction: column;
+  align-content: space-between; }
+  .grid .trip {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+    margin: 5px 0; }
+    .grid .trip img {
+      max-width: 100%;
+      height: auto;
+      align-self: center; }
 
 /*# sourceMappingURL=main.css.map */
