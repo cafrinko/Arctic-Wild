@@ -227,12 +227,14 @@ a {
   .grid .trip {
     display: flex;
     justify-content: center;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 250px;
     margin-bottom: 2.5%; }
     .grid .trip img {
-      max-width: 100%;
-      height: auto;
       align-self: center; }
+      @media screen and (max-width: 690px) {
+        .grid .trip img {
+          min-width: 690px;
+          height: inherit; } }
 
 /*# sourceMappingURL=main.css.map */
