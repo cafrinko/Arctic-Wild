@@ -135,19 +135,30 @@ a {
       margin-left: 25px; }
 
 .hero {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 2.5%; }
+  margin-bottom: 2.5%;
+  width: 100%; }
   .hero::after {
     clear: both;
     content: "";
     display: table; }
+  @media screen and (max-width: 833px) {
+    .hero {
+      height: 500px; } }
+  @media screen and (min-width: 834px) {
+    .hero {
+      height: 678px; } }
   .hero img {
-    max-width: 100%;
-    height: auto;
     z-index: -1;
     position: relative;
     top: -20%; }
+    @media screen and (max-width: 833px) {
+      .hero img {
+        min-width: 833px;
+        height: inherit; } }
+    @media screen and (min-width: 834px) {
+      .hero img {
+        min-width: 1130px;
+        height: inherit; } }
   .hero .hero-elements {
     max-width: 90%;
     height: auto;
@@ -168,6 +179,9 @@ a {
       text-align: center;
       flex-direction: column;
       align-items: center; }
+      .hero .hero-elements li img {
+        min-width: 94px;
+        height: 73px; }
       .hero .hero-elements li h3 {
         font-size: 18px;
         letter-spacing: 2px; }

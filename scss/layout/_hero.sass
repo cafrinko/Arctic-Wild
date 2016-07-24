@@ -1,18 +1,21 @@
 .hero
-  max-width: 100%
-  height: auto
-  margin-bottom: 2.5%
-  // float: left
   +clearfix
-  // display: flex
-  // -content: center
-  // position: relative
+  margin-bottom: 2.5%
+  width: 100%
+  @media screen and (max-width: 833px)
+    height: 500px
+  @media screen and (min-width: 834px)
+    height: 678px
   img
-    max-width: 100%
-    height: auto
     z-index: -1
     position: relative
     top: -20%
+    @media screen and (max-width: 833px)
+      min-width: 833px
+      height: inherit
+    @media screen and (min-width: 834px)
+      min-width: 1130px
+      height: inherit
     // display: flex
     // align-content: center
   // .shadow
@@ -46,6 +49,9 @@
       text-align: center
       flex-direction: column
       align-items: center
+      img
+        min-width: 94px
+        height: 73px
       h3
         font-size: 18px
         letter-spacing: 2px
