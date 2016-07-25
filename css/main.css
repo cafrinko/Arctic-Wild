@@ -73,40 +73,19 @@ a {
   display: flex;
   align-items: center; }
 
-.button {
-  display: flex;
-  justify-content: center;
-  background: darkorange;
-  width: 200px;
-  height: 75px;
-  border: none;
-  position: relative;
-  color: white; }
-  .button h4 {
-    font-size: 16px;
-    text-transform: uppercase; }
-  .button::after {
-    width: 0;
-    height: 0;
-    position: absolute;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 100px solid black;
-    background: black; }
-  @media screen and (max-width: 769px) {
-    .button {
-      display: none; } }
-
 .top-nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 100%;
   height: 75px; }
-  @media screen and (max-width: 961px) {
+  @media screen and (max-width: 769px) {
     .top-nav {
       justify-content: space-between;
       margin: 0; } }
+  @media screen and (min-width: 770px) and (max-width: 960px) {
+    .top-nav {
+      justify-content: space-around; } }
   .top-nav .logo {
     display: flex;
     align-items: center;
@@ -128,78 +107,94 @@ a {
     width: 65%;
     height: 100%;
     justify-content: flex-end; }
-    @media screen and (max-width: 961px) {
+    @media screen and (max-width: 960px) {
       .top-nav ul {
         display: none; } }
     .top-nav ul li {
       margin-left: 25px; }
 
 .hero {
-  margin-bottom: 5%;
   max-width: 100%;
   overflow: hidden; }
   .hero::after {
     clear: both;
     content: "";
     display: table; }
-  @media screen and (max-width: 833px) {
+  @media screen and (max-width: 960px) {
     .hero {
-      height: 414px; } }
-  @media screen and (min-width: 834px) {
+      height: 576px;
+      margin-bottom: 5%; } }
+  @media screen and (min-width: 960px) {
     .hero {
-      height: 678px; } }
+      height: 720px; } }
   .hero img {
     z-index: -1;
     position: relative;
     top: -20%; }
-    @media screen and (max-width: 690px) {
+    @media screen and (max-width: 960px) {
       .hero img {
-        max-width: 690px;
+        max-width: 960px;
         height: inherit; } }
-    @media screen and (min-width: 834px) {
+    @media screen and (min-width: 961px) {
       .hero img {
-        min-width: 1130px;
+        min-width: 1200px;
         height: inherit; } }
   .hero .hero-elements {
     max-width: 90%;
     height: auto;
     position: absolute;
-    top: 35%;
+    top: 45%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center; }
-    @media screen and (min-width: 770px) {
+    @media screen and (min-width: 961px) {
       .hero .hero-elements {
-        top: 40%; } }
+        top: 65%; } }
     .hero .hero-elements li {
-      margin-bottom: 1%;
+      margin-bottom: 2%;
       display: flex;
       text-align: center;
       flex-direction: column;
       align-items: center; }
       .hero .hero-elements li img {
         min-width: 94px;
-        height: 73px; }
-      .hero .hero-elements li h3 {
-        font-size: 18px;
-        letter-spacing: 2px; }
-      .hero .hero-elements li h1 {
-        margin-bottom: 5%;
-        font-size: 84px; }
+        height: 73px;
+        margin-bottom: 10%; }
+      @media screen and (max-width: 960px) {
+        .hero .hero-elements li h3 {
+          font-size: 20px;
+          letter-spacing: 2px; } }
+      @media screen and (min-width: 961px) {
+        .hero .hero-elements li h3 {
+          font-size: 28px;
+          letter-spacing: 4px; } }
+      @media screen and (max-width: 960px) {
+        .hero .hero-elements li h1 {
+          margin-bottom: 5%;
+          font-size: 84px; } }
+      @media screen and (min-width: 961px) {
+        .hero .hero-elements li h1 {
+          margin-bottom: 5%;
+          font-size: 120px; } }
       .hero .hero-elements li .line {
-        margin-bottom: 10%;
+        margin-bottom: 12%;
         background: white;
         width: 300px;
         height: 5px; }
+        @media screen and (min-width: 961px) {
+          .hero .hero-elements li .line {
+            margin-bottom: 40%; } }
 
 .middle-nav {
   display: flex;
   width: 100%;
   height: 80px;
-  background: grey; }
+  background: #353535;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black; }
   @media screen and (max-width: 961px) {
     .middle-nav {
       display: none; } }
@@ -215,6 +210,144 @@ a {
         position: relative;
         left: 30%; }
 
+.rafting {
+  max-width: 100%;
+  height: auto;
+  position: relative; }
+  .rafting .circle-raft {
+    width: 60px;
+    height: 60px;
+    background: rgba(104, 104, 104, 0.8);
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%); }
+    .rafting .circle-raft img {
+      width: 30px;
+      max-height: 43px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%); }
+
+.camping {
+  max-width: 100%;
+  height: auto;
+  position: relative; }
+  .camping .circle-camp {
+    width: 60px;
+    height: 60px;
+    background: rgba(104, 104, 104, 0.8);
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%); }
+    .camping .circle-camp img {
+      width: 40px;
+      max-height: 40px;
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%); }
+
+.backpacking {
+  max-width: 100%;
+  height: auto;
+  position: relative; }
+  .backpacking .circle-boots {
+    width: 60px;
+    height: 60px;
+    background: rgba(104, 104, 104, 0.8);
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%); }
+    .backpacking .circle-boots img {
+      width: 35px;
+      max-height: 34px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%); }
+
+.canoeing {
+  max-width: 100%;
+  height: auto;
+  position: relative; }
+  .canoeing .circle-canoe {
+    width: 60px;
+    height: 60px;
+    background: rgba(104, 104, 104, 0.8);
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%); }
+    .canoeing .circle-canoe img {
+      width: 30px;
+      max-height: 43px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%); }
+
+.photography {
+  max-width: 100%;
+  height: auto;
+  position: relative; }
+  .photography .circle-camera {
+    width: 60px;
+    height: 60px;
+    background: rgba(104, 104, 104, 0.8);
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%); }
+    .photography .circle-camera img {
+      width: 40px;
+      max-height: 40px;
+      position: absolute;
+      top: 52.5%;
+      left: 52.5%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%); }
+
+.whale-watching {
+  max-width: 100%;
+  height: auto;
+  position: relative; }
+  .whale-watching .circle-compass {
+    width: 60px;
+    height: 60px;
+    background: rgba(104, 104, 104, 0.8);
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%); }
+    .whale-watching .circle-compass img {
+      width: 35px;
+      max-height: 44px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%); }
+
 .grid {
   display: flex;
   max-width: 100%;
@@ -229,31 +362,66 @@ a {
     .grid {
       flex-direction: column;
       align-content: space-between; } }
-  @media screen and (min-width: 691px) and (max-width: 960px) {
+  @media screen and (min-width: 691px) {
     .grid {
       flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center; } }
+      flex-wrap: wrap; } }
   .grid .trip {
-    margin-bottom: 5%;
     display: flex;
     justify-content: center;
     align-self: center;
     width: 100%; }
     @media screen and (max-width: 690px) {
       .grid .trip {
-        height: 250px; } }
+        height: 250px;
+        margin-bottom: 5%; } }
     @media screen and (min-width: 691px) and (max-width: 960px) {
       .grid .trip {
         height: 420px;
-        flex-wrap: wrap; }
-        .grid .trip .camping, .grid .trip .backpacking, .grid .trip .canoeing, .grid .trip .photography {
-          width: 480px; } }
+        margin: 0; } }
+    @media screen and (min-width: 961px) {
+      .grid .trip {
+        height: 420px;
+        width: 50%;
+        overflow: hidden; } }
     .grid .trip img {
       align-self: center;
       height: inherit; }
       @media screen and (max-width: 690px) {
         .grid .trip img {
           max-width: 690px; } }
+  @media screen and (min-width: 691px) and (max-width: 960px) {
+    .grid .camping, .grid .backpacking, .grid .canoeing, .grid .photography {
+      overflow: hidden;
+      width: 50%; } }
+  @media screen and (min-width: 691px) and (min-width: 961px) {
+    .grid .camping, .grid .backpacking, .grid .canoeing, .grid .photography {
+      overflow: hidden;
+      width: 25%; } }
+
+.button {
+  display: flex;
+  justify-content: center;
+  background: darkorange;
+  width: 200px;
+  height: 75px;
+  border: none;
+  position: relative;
+  color: white;
+  border-radius: 2%; }
+  .button h4 {
+    font-size: 16px;
+    text-transform: uppercase; }
+  .button::after {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid black;
+    background: black; }
+  @media screen and (max-width: 769px) {
+    .button {
+      display: none; } }
 
 /*# sourceMappingURL=main.css.map */
