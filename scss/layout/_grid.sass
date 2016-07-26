@@ -4,40 +4,84 @@
   max-width: 100%
   height: auto
   margin: auto
-  overflow: hidden
   @media screen and (max-width: 690px)
     flex-direction: column
+    justify-content: center
+    align-self: center
     align-content: space-between
   @media screen and (min-width: 691px)
     flex-direction: row
     flex-wrap: wrap
-  // @media screen and (min-width: 961px)
-  //   background: #353535
-  //   margin-top: 5%
+  // a
+  //   display: block
+  //   // justify-content: flex-start
+  //   // align-self: center
+  //   // flex-wrap: nowrap
+  //   @media screen and (max-width: 690px)
+  //     width: 690px
+  //     height: 250px
+  //     margin-bottom: 5%
+  //   @media screen and (min-width: 691px) and (max-width: 960px)
+  //     width: 1130px
+  //     height: 420px
+  //     margin: 0
+  //   @media screen and (min-width: 961px)
+  //     width: 1130px
+  //     height: 420px
   .trip
+    +clearfix
     display: flex
     justify-content: center
     align-self: center
-    width: 100%
     @media screen and (max-width: 690px)
+      width: 690px
       height: 250px
       margin-bottom: 5%
     @media screen and (min-width: 691px) and (max-width: 960px)
+      width: 1130px
       height: 420px
       margin: 0
     @media screen and (min-width: 961px)
+      width: 1130px
       height: 420px
-      width: 50%
-      overflow: hidden
-    img
-      align-self: center
-      height: inherit
-      @media screen and (max-width: 690px)
-        max-width: 690px
+  .rafting
+    background: url('../img/grid/rafting.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+  .camping
+    background: url('../img/grid/camping.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+  .backpacking
+    background: url('../img/grid/backpacking.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+  .canoeing
+    background: url('../img/grid/canoeing.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+  .photography
+    background: url('../img/grid/photography.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+  .whale-watching
+    background: url('../img/grid/whale-watching.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
   .camping, .backpacking, .canoeing, .photography
     @media screen and (min-width: 691px) and (max-width: 960px)
       overflow: hidden
-      width: 50%
-    @media screen and (min-width: 691px) and (min-width: 961px)
+      max-width: 50%
+    @media screen and (min-width: 961px)
       overflow: hidden
-      width: 25%
+      max-width: 25%
+  .rafting, .whale-watching
+    @media screen and (min-width: 961px)
+      overflow: hidden
+      max-width: 50%

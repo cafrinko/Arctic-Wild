@@ -213,147 +213,122 @@ a {
 .rafting {
   max-width: 100%;
   height: auto;
-  position: relative; }
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .rafting .circle-raft {
     width: 60px;
     height: 60px;
-    background: rgba(104, 104, 104, 0.8);
+    background: rgba(48, 48, 48, 0.6);
     border-radius: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%); }
+    display: flex;
+    justify-content: center;
+    align-items: center; }
     .rafting .circle-raft img {
       width: 30px;
-      max-height: 43px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%); }
+      max-height: 43px; }
 
 .camping {
   max-width: 100%;
   height: auto;
-  position: relative; }
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .camping .circle-camp {
     width: 60px;
     height: 60px;
-    background: rgba(104, 104, 104, 0.8);
+    background: rgba(48, 48, 48, 0.6);
     border-radius: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%); }
+    display: flex;
+    justify-content: center;
+    align-items: center; }
     .camping .circle-camp img {
       width: 40px;
-      max-height: 40px;
-      position: absolute;
-      top: 55%;
-      left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%); }
+      max-height: 40px; }
 
 .backpacking {
   max-width: 100%;
   height: auto;
-  position: relative; }
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .backpacking .circle-boots {
     width: 60px;
     height: 60px;
-    background: rgba(104, 104, 104, 0.8);
+    background: rgba(48, 48, 48, 0.6);
     border-radius: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%); }
+    display: flex;
+    justify-content: center;
+    align-items: center; }
     .backpacking .circle-boots img {
       width: 35px;
-      max-height: 34px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%); }
+      max-height: 34px; }
 
 .canoeing {
   max-width: 100%;
   height: auto;
-  position: relative; }
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .canoeing .circle-canoe {
     width: 60px;
     height: 60px;
-    background: rgba(104, 104, 104, 0.8);
+    background: rgba(48, 48, 48, 0.6);
     border-radius: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%); }
+    display: flex;
+    justify-content: center;
+    align-items: center; }
     .canoeing .circle-canoe img {
       width: 30px;
-      max-height: 43px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%); }
+      max-height: 43px; }
 
 .photography {
   max-width: 100%;
   height: auto;
-  position: relative; }
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .photography .circle-camera {
     width: 60px;
     height: 60px;
-    background: rgba(104, 104, 104, 0.8);
+    background: rgba(48, 48, 48, 0.6);
     border-radius: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%); }
+    display: flex;
+    justify-content: center;
+    align-items: center; }
     .photography .circle-camera img {
       width: 40px;
-      max-height: 40px;
-      position: absolute;
-      top: 52.5%;
-      left: 52.5%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%); }
+      max-height: 40px; }
 
 .whale-watching {
   max-width: 100%;
   height: auto;
-  position: relative; }
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .whale-watching .circle-compass {
     width: 60px;
     height: 60px;
-    background: rgba(104, 104, 104, 0.8);
+    background: rgba(48, 48, 48, 0.6);
     border-radius: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%); }
+    display: flex;
+    justify-content: center;
+    align-items: center; }
     .whale-watching .circle-compass img {
       width: 35px;
-      max-height: 44px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%); }
+      max-height: 44px; }
+
+.circle {
+  transition: all 0.2s; }
+
+.circle:hover {
+  transform: scale(2, 2); }
 
 .grid {
   display: flex;
   max-width: 100%;
   height: auto;
-  margin: auto;
-  overflow: hidden; }
+  margin: auto; }
   .grid::after {
     clear: both;
     content: "";
@@ -361,6 +336,8 @@ a {
   @media screen and (max-width: 690px) {
     .grid {
       flex-direction: column;
+      justify-content: center;
+      align-self: center;
       align-content: space-between; } }
   @media screen and (min-width: 691px) {
     .grid {
@@ -369,35 +346,67 @@ a {
   .grid .trip {
     display: flex;
     justify-content: center;
-    align-self: center;
-    width: 100%; }
+    align-self: center; }
+    .grid .trip::after {
+      clear: both;
+      content: "";
+      display: table; }
     @media screen and (max-width: 690px) {
       .grid .trip {
+        width: 690px;
         height: 250px;
         margin-bottom: 5%; } }
     @media screen and (min-width: 691px) and (max-width: 960px) {
       .grid .trip {
+        width: 1130px;
         height: 420px;
         margin: 0; } }
     @media screen and (min-width: 961px) {
       .grid .trip {
-        height: 420px;
-        width: 50%;
-        overflow: hidden; } }
-    .grid .trip img {
-      align-self: center;
-      height: inherit; }
-      @media screen and (max-width: 690px) {
-        .grid .trip img {
-          max-width: 690px; } }
+        width: 1130px;
+        height: 420px; } }
+  .grid .rafting {
+    background: url("../img/grid/rafting.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .grid .camping {
+    background: url("../img/grid/camping.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .grid .backpacking {
+    background: url("../img/grid/backpacking.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .grid .canoeing {
+    background: url("../img/grid/canoeing.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .grid .photography {
+    background: url("../img/grid/photography.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .grid .whale-watching {
+    background: url("../img/grid/whale-watching.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
   @media screen and (min-width: 691px) and (max-width: 960px) {
     .grid .camping, .grid .backpacking, .grid .canoeing, .grid .photography {
       overflow: hidden;
-      width: 50%; } }
-  @media screen and (min-width: 691px) and (min-width: 961px) {
+      max-width: 50%; } }
+  @media screen and (min-width: 961px) {
     .grid .camping, .grid .backpacking, .grid .canoeing, .grid .photography {
       overflow: hidden;
-      width: 25%; } }
+      max-width: 25%; } }
+  @media screen and (min-width: 961px) {
+    .grid .rafting, .grid .whale-watching {
+      overflow: hidden;
+      max-width: 50%; } }
 
 .button {
   display: flex;
