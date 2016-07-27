@@ -54,7 +54,7 @@ body {
   height: 100%;
   color: white;
   text-transform: uppercase;
-  background: black; }
+  background: #d1d1c9; }
 
 .wrap {
   display: flex;
@@ -74,6 +74,7 @@ a {
   align-items: center; }
 
 .top-nav {
+  background: black;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -119,16 +120,22 @@ a {
   overflow: hidden;
   z-index: -1;
   position: relative;
-  top: -20%; }
+  top: -20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
   .hero::after {
     clear: both;
     content: "";
     display: table; }
+  @media screen and (max-width: 690px) {
+    .hero {
+      margin-bottom: 5%; } }
   @media screen and (max-width: 960px) {
     .hero {
       max-width: 960px;
-      height: 576px;
-      margin-bottom: 5%; } }
+      height: 576px; } }
   @media screen and (min-width: 960px) {
     .hero {
       max-width: 1300px;
@@ -136,11 +143,6 @@ a {
   .hero .hero-elements {
     max-width: 90%;
     height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center; }
@@ -211,7 +213,6 @@ a {
 
 .grid {
   display: flex;
-  max-width: 100%;
   height: auto;
   margin: auto; }
   .grid::after {
@@ -220,12 +221,14 @@ a {
     display: table; }
   @media screen and (max-width: 690px) {
     .grid {
+      max-width: 90%;
       flex-direction: column;
       justify-content: center;
       align-self: center;
       align-content: space-between; } }
   @media screen and (min-width: 691px) {
     .grid {
+      max-width: 100%;
       flex-direction: row;
       flex-wrap: wrap; } }
   .grid .trip {
@@ -240,52 +243,49 @@ a {
       .grid .trip {
         width: 690px;
         height: 250px;
-        margin-bottom: 5%; } }
+        margin-bottom: 5%;
+        border-radius: 5px; } }
     @media screen and (min-width: 691px) and (max-width: 960px) {
       .grid .trip {
+        border: 0.25px solid #d1d1c9;
         width: 1130px;
         height: 420px;
         margin: 0; } }
     @media screen and (min-width: 961px) {
       .grid .trip {
+        border: 0.25px solid #d1d1c9;
         width: 1130px;
         height: 420px; } }
   .grid .rafting {
     background: url("../img/grid/rafting.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    z-index: -1; }
+    background-position: center; }
   .grid .camping {
     background: url("../img/grid/camping.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    z-index: -1; }
+    background-position: center; }
   .grid .backpacking {
     background: url("../img/grid/backpacking.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    z-index: -1; }
+    background-position: center; }
   .grid .canoeing {
     background: url("../img/grid/canoeing.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    z-index: -1; }
+    background-position: center; }
   .grid .photography {
     background: url("../img/grid/photography.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    z-index: -1; }
+    background-position: center; }
   .grid .whale-watching {
     background: url("../img/grid/whale-watching.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    z-index: -1; }
+    background-position: center; }
   @media screen and (min-width: 691px) and (max-width: 960px) {
     .grid .camping, .grid .backpacking, .grid .canoeing, .grid .photography {
       overflow: hidden;
@@ -329,7 +329,6 @@ a {
       .rafting .rafting-trips {
         top: 190px;
         left: 20px;
-        color: black;
         font-weight: bold; } }
     @media screen and (min-width: 691px) {
       .rafting .rafting-trips {
@@ -373,7 +372,6 @@ a {
       .camping .camping-trips {
         top: 190px;
         left: 20px;
-        color: black;
         font-weight: bold; } }
     @media screen and (min-width: 691px) {
       .camping .camping-trips {
@@ -417,7 +415,6 @@ a {
       .backpacking .backpacking-trips {
         top: 190px;
         left: 20px;
-        color: black;
         font-weight: bold; } }
     @media screen and (min-width: 691px) {
       .backpacking .backpacking-trips {
@@ -461,7 +458,6 @@ a {
       .canoeing .canoeing-trips {
         top: 190px;
         left: 40px;
-        color: black;
         font-weight: bold; } }
     @media screen and (min-width: 691px) {
       .canoeing .canoeing-trips {
@@ -505,7 +501,6 @@ a {
       .photography .photography-trips {
         top: 190px;
         left: 20px;
-        color: black;
         font-weight: bold; } }
     @media screen and (min-width: 691px) {
       .photography .photography-trips {
@@ -549,7 +544,6 @@ a {
       .whale-watching .custom-trips {
         top: 190px;
         left: 20px;
-        color: black;
         font-weight: bold; } }
     @media screen and (min-width: 691px) {
       .whale-watching .custom-trips {

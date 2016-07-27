@@ -1,15 +1,16 @@
 .grid
   +clearfix
   display: flex
-  max-width: 100%
   height: auto
   margin: auto
   @media screen and (max-width: 690px)
+    max-width: 90%
     flex-direction: column
     justify-content: center
     align-self: center
     align-content: space-between
   @media screen and (min-width: 691px)
+    max-width: 100%
     flex-direction: row
     flex-wrap: wrap
   .trip
@@ -21,11 +22,14 @@
       width: 690px
       height: 250px
       margin-bottom: 5%
+      border-radius: 5px
     @media screen and (min-width: 691px) and (max-width: 960px)
+      border: 0.25px solid #d1d1c9
       width: 1130px
       height: 420px
       margin: 0
     @media screen and (min-width: 961px)
+      border: 0.25px solid #d1d1c9
       width: 1130px
       height: 420px
   .rafting
@@ -33,37 +37,31 @@
     background-repeat: no-repeat
     background-size: cover
     background-position: center
-    z-index: -1
   .camping
     background: url('../img/grid/camping.jpg')
     background-repeat: no-repeat
     background-size: cover
     background-position: center
-    z-index: -1
   .backpacking
     background: url('../img/grid/backpacking.jpg')
     background-repeat: no-repeat
     background-size: cover
     background-position: center
-    z-index: -1
   .canoeing
     background: url('../img/grid/canoeing.jpg')
     background-repeat: no-repeat
     background-size: cover
     background-position: center
-    z-index: -1
   .photography
     background: url('../img/grid/photography.jpg')
     background-repeat: no-repeat
     background-size: cover
     background-position: center
-    z-index: -1
   .whale-watching
     background: url('../img/grid/whale-watching.jpg')
     background-repeat: no-repeat
     background-size: cover
     background-position: center
-    z-index: -1
   .camping, .backpacking, .canoeing, .photography
     @media screen and (min-width: 691px) and (max-width: 960px)
       overflow: hidden
